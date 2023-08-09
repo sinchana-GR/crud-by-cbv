@@ -10,7 +10,7 @@ class School(models.Model):
         return self.scname
 
     def get_absolute_url(self):
-        return reverse('details',kwargs={'pk':self.pk})
+        return reverse('detail',kwargs={'pk':self.pk})
 
 
     

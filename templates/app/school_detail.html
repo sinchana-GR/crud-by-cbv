@@ -11,9 +11,22 @@
         <h1>name of school {{DOSI.scname}}</h1>
         <h1>principal of school {{DOSI.scprincipal}}</h1>
         <h1>location of school {{DOSI.sclocation}}</h1>
+        <h1>-------------------------</h1>
 
+         <h1>students of {{DOSI.scname}} is</h1>
+         
 
+         <h1>****************</h1>
 
+         {% for sto in DOSI.panda.all %}
+
+          <h1>name of student is {{sto.sname}}</h1>
+          <h1>age of student is {{sto.sage}}</h1>
+          <h1>****************</h1>
+
+         {% endfor %}
+        
+         <a href="{% url 'update' pk=DOSI.pk %}">update</a>
 
     </center>
 </body>

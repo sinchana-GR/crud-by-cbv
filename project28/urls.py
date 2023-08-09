@@ -20,6 +20,14 @@ from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('School_list/',School_list.as_view(),name='School_list'),
+    path('School_create/',School_create.as_view(),name='School_create'),
+
+
+
+
+
+
+    re_path('^update/(?P<pk>\d+)/',School_update.as_view(),name='update'),
 
     re_path('(?P<pk>\d+)/',School_detail.as_view(),name='detail'),
 
