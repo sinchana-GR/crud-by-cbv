@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <center>
+   <h1>delete the selected object</h1>
+   <h1>are you sure to delete {{dso.scname}}</h1>
+   <form action="" method="POST">
+     {% csrf_token %}
+
+    <input type="submit" value="yes_confirm">
+
+   </form>
+   <h1><a href="{% url 'School_list' %}">go back to school list</a></h1>
+   <h1><a href="{% url 'detail' pk=dso.pk %}">go to school details</a></h1>
+  </center>
+
+</body>
+</html>
